@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dislaybson Kels</title>
+</head>
+<body>
+    <h1>APRENDER A FAZER A ARVÓRE DOM NO MEU SITE:</h1>
+    <p>Existe toda uma árcore hierárquica por tras de da estrutura de um site, logo abaixo, temos uma representação gráfica dessa estrutura: </p>
+    <img src="C:\Users\DISLAYBSON KELS\Documents\JAVASCRIPT\imagens\img-aula8\arvore-dom.jpg" >
+    <p>Essa ferramenta DOM, é crucial para incorporar conteúdos provenientes da linguagem Javascript, no próprio estilo do site, por meio da concepção da estrutúra de arvóre que subdivide ramos através de classes e id.</p>
+    <p>Podemos selecionar elementos da arvóre utilizando o DOM, através das classes, id, nome, seletor e Marca.</p>
+    <p>Isso é importantísso por exemplo para criar ferramentas de busca do site.</p>
+    <div id="msg">Isso é massa demais</div>
+    
+    <script>
+        //Marca ou Nome:  getElementsByName
+        //id: getElementsById
+        //class: getElementsByClassName
+        window.document.write(window.navigation)
+        var p1 = window.document.getElementsByTagName('p')[1]  //variável correspondente ao parágrafo 1
+        window.document.write('Está escrito assim: ' + p1.innerText)    //replica o parágrafo capturado pela variável
+        //getElementBytagName, serve para capturar os conteúdo existentes em um objeto.
+        var d = window.document.getElementsById('msg')
+        d.innerText = 'Olá.............'
+
+        var g = window.document.querySelector('div#msg')
+        d.style.background = "blue"
+    </script>
+
+</body>
+</html>

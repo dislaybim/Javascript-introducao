@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area{
+            font: normal 20pt Arial;   /*fonte aria*/
+            background: green;  /*cor de fundo verde*/
+            color: white;   /*cor das letras, brancas*/
+            width: 200px;   /*largura 200 pixels*/
+            height: 200px;  /*altura 200px*/
+            line-height: 200px; /*deslocar o texto a determinada altura*/
+            text-align: center; /*centralizar o texto na div*/
+        }
+    </style>
+</head>
+<body>
+
+    <!--<div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()"> era outra forma de representar-->
+
+
+    <div id="area"> <!--aqui a gente apresenta a função e define o id-->
+        Interajaaa....  <!--A função clicar vai executar, mediante a qualquer toque no elemento-->
+    </div>
+    <script>
+        //urge reflexões, acerca dos eventos que ocorrem nas div
+        //dessa forma existe vários eventos a ser observados
+        //só com relação a movimento de mouse, temos 6 eventos
+        //podemos observar uma gama diversidade de eventos no site: event reference IMDN, da Mozila.
+        
+        var a = window.document.getElementById('area') //variável criada
+ 
+        a.addEventListener('click', clicar) //direciona o estado do argumento da função para o objeto em html
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+ 
+        function clicar(){  //essa é a função responsável por fazer essa ação no texto html
+            var a = window.document.getElementById('area')  //veja que utiliza-se o recurso do DOM
+            a.innerText = 'Clicou!' //para elemento id.
+            a.style.background = 'red'
+        }
+        function entrar(){  // função associada ao movimento do mouse, quando entra e quando sai
+            a.innerText = "Entrou!"
+        }
+        function sair(){    //quando sai, a caixa fica vermelha.
+            a.innerText = 'Saiu!'
+            a.style.background = 'green'
+        }
+    </script>
+</body>
+</html>

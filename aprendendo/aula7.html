@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dislaybson Kels</title>
+    <style>
+        main{
+            background-color: rgb(97, 140, 206);
+            color: white;
+            text-align: justify;
+            font-size: 16px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1{
+            color: white;
+            text-align: justify;
+            font-size: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            background-color: black;
+        }
+        .while{
+            color: rgb(97, 248, 77);
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Estruturas de Repetição</h1>
+        <p>Nesse Tópico em Javascript, vamos aprender acerca das estuturas de repetições, que no geral 
+            existem três tipos principais:
+        </p>
+        <ul>
+            <li>WHILE: <p class="while">let x=1<br>While(x <= 10){<br>console.log(x);<br>x = x + 1;<br>}</p></li>
+            <li>DO WHILE</li>
+            <li>FOR</li>
+        </ul>
+
+    </main>
+    <script>
+        var nome, resposta;
+        while (true){
+            nome = prompt("Entre com seu nome: ")
+            alert("Olá, "+ nome + "! Tenha um Bom dia. ")   //alert é equivalente o printf da linguagem "c"
+            resposta = prompt("Deseja continuar? (s/n)")    //prompt é equivalente o Input do Python.
+            if (resposta == "n"){
+                break;    //além do comando Break temos o comando continue.
+            }
+        }
+        for (let i = 1; i<=10; i++){    //para i=1, se i<=10 ocorrerá o incremento da variável de controle
+            alert(`O valor de i é ${i + 1}`);
+            continue;
+            alert(`O próximo valor de i será ${i}`)
+        }
+    </script>
+</body>
+</html>
