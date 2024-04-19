@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARRAY</title>
+</head>
+<body>
+    <h1>AULA SOBRE ARRAY OU VETORES:</h1>
+    <p>Manipulação de array:</p>
+
+
+    <p>As funções de manipulação de arrays em JavaScript são extremamente úteis e poderosas para realizar operações como adicionar, remover, modificar e percorrer elementos em um array. Elas permitem manipular os dados de forma eficiente e expressiva. Abaixo, vou apresentar algumas das funções mais comuns para manipulação de arrays:</p>
+
+   <main> 
+    <section class="1">
+ 1. `push()`<br>
+
+A função `push()` adiciona um ou mais elementos ao final de um array e retorna o novo comprimento do array.<br>
+
+Exemplo:<br>
+javascript<br>
+let frutas = ['maçã', 'banana'];<br>
+frutas.push('laranja', 'uva');<br>
+console.log(frutas);  // Saída: ['maçã', 'banana', 'laranja', 'uva']<br>
+</section>
+<br>
+
+<section class="2">
+ 2. `pop()`<br>
+
+A função `pop()` remove o último elemento de um array e retorna esse elemento removido.<br>
+
+Exemplo:<br>
+javascript<br>
+let frutas = ['maçã', 'banana', 'laranja'];<br>
+let ultimaFruta = frutas.pop();<br>
+console.log(ultimaFruta);  // Saída: 'laranja'<br>
+console.log(frutas);       // Saída: ['maçã', 'banana']<br>
+
+</section>
+<br>
+
+<section class="3">
+ 3. `shift()`<br>
+
+A função `shift()` remove o primeiro elemento de um array e retorna esse elemento removido, atualizando os índices dos outros elementos.
+<br>
+Exemplo:<br>
+javascript<br>
+let frutas = ['maçã', 'banana', 'laranja'];<br>
+let primeiraFruta = frutas.shift();<br>
+console.log(primeiraFruta);  // Saída: 'maçã'<br>
+console.log(frutas);         // Saída: ['banana', 'laranja']<br>
+</section>
+<br>
+<section class="4">
+ 4. `unshift()`<br>
+
+A função `unshift()` adiciona um ou mais elementos no início de um array e retorna o novo comprimento do array.<br>
+
+Exemplo:<br>
+javascript<br>
+let frutas = ['banana', 'laranja'];<br>
+frutas.unshift('maçã', 'uva');<br>
+console.log(frutas);  // Saída: ['maçã', 'uva', 'banana', 'laranja']<br>
+</section>
+<br>
+
+<section class="5">
+ 5. `splice()`<br>
+
+A função `splice()` permite adicionar, remover ou substituir elementos em qualquer posição de um array.<br>
+
+Exemplos:<br>
+javascript<br>
+// Adicionar elementos<br>
+let frutas = ['maçã', 'laranja', 'uva'];<br>
+frutas.splice(1, 0, 'banana');  // Adiciona 'banana' na posição 1<br>
+console.log(frutas);  // Saída: ['maçã', 'banana', 'laranja', 'uva']<br>
+
+// Remover elementos<br>
+frutas.splice(2, 1);  // Remove 1 elemento a partir da posição 2<br>
+console.log(frutas);  // Saída: ['maçã', 'banana', 'uva']<br>
+
+// Substituir elementos<br>
+frutas.splice(1, 1, 'melancia');  // Substitui 'banana' por 'melancia' na posição 1<br>
+console.log(frutas);  // Saída: ['maçã', 'melancia', 'uva']<br>
+</section>
+<br>
+
+<section class="6">
+ 6. `concat()`<br>
+
+A função `concat()` combina dois ou mais arrays, retornando um novo array sem modificar os arrays originais.<br>
+
+Exemplo:<br>
+javascript<br>
+let frutas = ['maçã', 'banana'];<br>
+let outrasFrutas = ['laranja', 'uva'];<br>
+let todasFrutas = frutas.concat(outrasFrutas);<br>
+console.log(todasFrutas);  // Saída: ['maçã', 'banana', 'laranja', 'uva']<br>
+</section>
+<br>
+
+<section classe="7">
+ 7. `map()`<br>
+
+A função `map()` cria um novo array com os resultados de uma função aplicada a cada elemento do array original.<br>
+
+Exemplo:<br>
+javascript<br>
+let numeros = [1, 2, 3];<br>
+let dobrados = numeros.map(num => num * 2);<br>
+console.log(dobrados);  // Saída: [2, 4, 6]<br>
+</section>
+<br>
+
+<section class="8">
+ 8. `filter()`<br>
+
+A função `filter()` cria um novo array com todos os elementos que passam por um teste (fornecido como uma função).
+<br>
+Exemplo:<br>
+javascript<br>
+let numeros = [1, 2, 3, 4, 5];<br>
+let pares = numeros.filter(num => num % 2 === 0);<br>
+console.log(pares);  // Saída: [2, 4]<br>
+</section>
+<br>
+
+<section class="9">
+9. `reduce()`<br>
+
+A função `reduce()` executa uma função redutora (fornecida) para cada elemento do array, resultando em um único valor.
+<br>
+Exemplo:<br>
+javascript<br>
+let numeros = [1, 2, 3, 4];<br>
+let soma = numeros.reduce((total, num) => total + num, 0);<br>
+console.log(soma);  // Saída: 10 (soma de todos os números)<br>
+</section>
+<br>
+
+<section class="10">
+10. `forEach()`<br>
+
+A função `forEach()` executa uma função para cada elemento do array.<br>
+
+Exemplo:<br>
+javascript<br>
+let frutas = ['maçã', 'banana', 'laranja'];<br>
+frutas.forEach(fruta => {<br>
+    console.log(fruta);<br>
+});<br>
+// Saída:<br>
+// maçã<br>
+// banana<br>
+// laranja<br>
+
+</section>
+<br>
+
+Essas são apenas algumas das muitas funções úteis para manipulação de arrays em JavaScript. Elas são fundamentais para trabalhar com dados em JavaScript de forma eficiente e expressiva. Continue praticando e explorando essas funções para se tornar mais confortável com a manipulação de arrays! Se precisar de mais exemplos ou explicações, estou aqui para ajudar.
+   
+</main>
+
+    <script src="C:\Users\DISLAYBSON KELS\Documents\JAVASCRIPT\modulo_02\aula_04\aula_04.js"></script>   
+    <script src="C:\Users\DISLAYBSON KELS\Documents\JAVASCRIPT\modulo_02\aula_04_01\aula_03_01.js"></script>  
+</body>
+</html>
